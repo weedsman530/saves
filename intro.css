@@ -1,0 +1,159 @@
+@font-face {
+    font-family: 'Amiri';
+    src: url(fonts/Amiri-Bold.ttf) format(truetype);
+}
+
+@font-face {
+    font-family: 'Amiri-reg';
+    src: url(fonts/Amiri-Regular.ttf) format(truetype);
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        0deg , rgba(118, 167, 154 , 70%)10% , 
+        rgba(118, 167, 154 , 0%)100%
+    );
+    background-repeat: no-repeat;
+    
+
+}
+.container {
+    /* border: 3px solid green; */
+    display: flex;
+    width: 100%;
+    height: 500px;
+    position: relative;
+    background: transparent;
+    border: none;
+    outline: none;
+
+    
+
+    
+    
+}
+
+.slides { 
+    /* border: 3px solid black; */
+    display: flex;
+    gap: 10px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100%;height: 100%;
+    
+}
+
+.slides:hover {
+    gap: 0;
+}
+
+.slide { 
+    border: 3px solid #769CA7;
+    display: flex;
+    height: 400px;
+    flex: 0 0 100px ;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: relative;
+    transition: 0.3s ease;
+    overflow: hidden;
+   
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    /* border: 1.5px solid rgb(3, 3, 3); */
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    object-fit: cover;
+    position: absolute;
+    /* background: red; */
+    transition:  0.3s ease;
+    translate: 0 -50% ;
+    top: 50%;
+    
+}
+
+
+.slide:hover {
+    transform: scale(1.1);
+    flex: 0 0 500px;
+    z-index: 10;
+    background: linear-gradient(
+         0deg , rgba(118, 156, 167 , 70%)10% , 
+        rgba(118, 156, 167 , 0%)100%
+    );
+    
+    
+    
+    
+}
+
+.slide:hover img { 
+   
+    object-fit: contain;
+    width: 50%;
+    height: auto;
+    
+    left: 0;
+    position: absolute;
+    
+    border-radius: 15px;
+    
+   
+}
+.slide:hover .content {
+    opacity: 1;
+    visibility: visible;
+}
+
+.slide .content {
+    border: 2px solid blue;
+    position: absolute;
+    bottom: 0;
+    border-radius: 12px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    width: 45%;
+    height: 50%;
+    right: 3%;
+    top: 10%;
+    background: linear-gradient(
+        180deg , rgba(117, 169, 128, 70%)10% , 
+        rgba(118, 167, 153 , 0%)100%
+    );
+    
+
+}
+.slide .content span  {
+    line-height: 0;
+}
+.slide .content span h3 {
+    color: rgb(3, 3, 3);
+    font-family: 'Amiri';
+    font-size: 30px;
+    line-height: 0;
+    
+}
+
+.slide .content span p { 
+    color: rgb(3, 3, 3);
+    font-family: 'Amiri-reg';
+    font-size: 16px;
+    line-height: 1.2;
+}

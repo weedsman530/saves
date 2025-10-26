@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'fbold';
+  src: url();
+}
+
 body {
   font-family: "Cairo", sans-serif;
   background: #000000;
@@ -5,9 +10,9 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 0;
- 
+  gap: 0px;
   margin: 0;
-  gap: 10px;
+  
   color: white;
 }
 
@@ -18,12 +23,12 @@ body {
   text-align: center;
 } */
 
-.grid-container1 {
+/* .grid-container1 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 10px;
-  width: 50%;
-  margin-top: 80px;
+  width: 60%;
+ 
   position: relative;
   border-radius: 15px;
   
@@ -37,7 +42,6 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 20px;
   width: 60%;
-  margin-top: 80px;
   position: relative;
   border-radius: 15px;
 }
@@ -47,7 +51,6 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(220px, auto));
   gap: 20px;
   width: 60%;
-  margin-top: 80px;
   position: relative;
   border-radius: 15px;
   justify-content: center;
@@ -59,7 +62,6 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(220px, auto));
   gap: 20px;
   width: 60%;
-  margin-top: 80px;
   position: relative;
   border-radius: 15px;
   justify-content: center;
@@ -71,7 +73,6 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(220px, auto));
   gap: 20px;
   width: 60%;
-  margin-top: 80px;
   position: relative;
   border-radius: 15px;
   justify-content: center;
@@ -83,7 +84,6 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(220px, auto));
   gap: 20px;
   width: 60%;
-  margin-top: 80px;
   position: relative;
   border-radius: 15px;
   justify-content: center;
@@ -96,7 +96,6 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(220px, auto));
   gap: 20px;
   width: 60%;
-  margin-top: 80px;
   position: relative;
   border-radius: 15px;
   justify-content: center;
@@ -108,26 +107,29 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(220px, auto));
   gap: 20px;
   width: 60%;
-  margin-top: 80px;
   position: relative;
   border-radius: 15px;
   justify-content: center;
-}
-.grid-container9 {
-    display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, auto));
-  gap: 20px;
-  width: 60%;
-  margin-top: 80px;
-  position: relative;
-  border-radius: 15px;
-  justify-content: center;
-}
+} */
 
+.grid-container1 , .grid-container2 ,.grid-container3 ,
+.grid-container4 , .grid-container5 , .grid-container6 , .grid-container7 , .grid-container8 , .grid-container9{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, auto));
+  top: 20px;
+  width: 50%;
+  position: relative;
+  border-radius: 15px;
+  justify-content: center;
+  margin: 5px;
+  border: 3px solid saddlebrown;
+ 
+}
 
 .grid-container1 , .grid-container2 ,.grid-container3 ,
 .grid-container4 , .grid-container5 , .grid-container6 , .grid-container7 , .grid-container8 , .grid-container9{
   display: none;
+  
  
 }
 
@@ -210,19 +212,18 @@ body {
 
 
 .adult  , .adult2  , .adult3 , .adult4 , .adult5 ,.adult6 , .adult7 , .adult8 , .adult9{
-    min-width: 500px;
-    max-width: 50%;
-    display: flex;
-    
-    height: 120px;
-    border: 2px solid salmon;
-    background: transparent;
-    
-    position: relative;
-    border-radius: 20px;
-    margin-top: 70px;
-    /* display: flex; */
-    /* justify-content: space-around; */
+  position: relative;
+  width: 40%;
+  height: 80px;
+  border: 2px solid salmon;
+  border-radius: 20px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: visible; /* عشان الصورة اللي برة تظهر */
+  margin: 40px;
     
     
     
@@ -283,17 +284,16 @@ body {
 .adult9 h2
 
 {
-    position: relative;
-    /* right: 15%; */
-    /* top: 20px; */
-    color: rgb(255, 255, 255);
-    /* border: 3px solid salmon; */
-    width: 100%;
-    height: 100%;
-    transform: translateX(20%);
-    text-transform: capitalize;
-    direction: rtl;
-    text-align: center;
+    margin: 0;
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.3;
+  max-width: 80%;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  direction: rtl;
 }
 
 
@@ -307,16 +307,17 @@ body {
 .adult7 img,
 .adult8 img ,
 .adult9 img{
-    position: relative;
-    width: 150px;
-    height: 150px;
-    /* left: 15%; */
-    /* top: 10px; */
-    border: 3px solid  #72FAC4;
-    border-radius: 50%;
-    object-fit: cover;
-    transform: translateX(120%);
-    box-shadow: 5px 5px 10px whitesmoke , -5px -5px 10px whitesmoke;
+   position: absolute;
+  right: -150px; /* حرك الصورة يمين برة الكونتينر */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 3px solid #72FAC4;
+  object-fit: cover;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
 }
 
 
@@ -326,7 +327,7 @@ body {
   width: 50%;
   padding: 12px 18px;
   font-size: 16px;
-  margin-top: 30px;
+  
   border-radius: 25px;
   border: 2px solid #72FAC4;
   outline: none;
@@ -346,60 +347,15 @@ body {
   height: 900px;
   border-radius: 12px;
   position: fixed;
-  top: 30px;
+  
   left: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
- 
+  align-items: center;
+  gap: 20px;
   background:transparent;
   
-}
-
-.container {
-  margin-top: 5%;
-  width: 800px;
-  height: 120px;
-  border:none;
-  position: relative;
-  display: flex;
-
-  
-  
-  
-  box-shadow: 0px 0px 10px whitesmoke , 0px -0px 10px whitesmoke;
-  
-
-}
-
-.container .btn-categ {
-  width: 250px;
-  height: 100px;
-  border-radius: 10%;
-  border: 3px solid rgb(12, 26, 226);
-  background: transparent;
-cursor: pointer;
-  position: relative;
-  display: flex;
-  
-  justify-content: space-around;
-  align-items: center;
-  color: white;
-  
-}
-.container .btn-categ img {
-  width: 50%;
-  height: 50%;
-  border-radius: 50%;
-  position: relative;
-  object-fit: contain;
-  margin-top: 10px;
-  border: 3px solid gold;
-}
-.container .btn-categ h4 {
-  font-size: 20px;
-  position: relative;
-  margin-bottom: 0px;
 }
 
 #searchInput {
@@ -413,8 +369,6 @@ cursor: pointer;
       border: 1px solid #ccc;
       outline: none;
       text-align: center;
-      
-      
     }
 
 
@@ -427,7 +381,6 @@ cursor: pointer;
   height: 100px;
   border-radius: 12px;
   position: relative;
-  top: 30px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -443,7 +396,7 @@ cursor: pointer;
   border: 3px solid #72FAC4;
   border-radius: 50%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   transition: 0.3s ease-in-out;
   position: relative;
@@ -451,10 +404,18 @@ cursor: pointer;
 }
 
 .slide h3 {
+  width: 40%;
   font-size: 20px;
   display: none;
   position: absolute;
-  right: 30px;
+  right:2px;
+  white-space: normal;       /* ✅ يسمح بتقسيم السطر */
+  word-wrap: break-word;     /* ✅ يكسر الكلمات الطويلة */
+  overflow-wrap: break-word; /* ✅ دعم إضافي لمتصفحات جديدة */
+  text-align: center;        /* ✅ يخلي النص في النص */
+  font-size: 16px;           /* تقدر تزبط الحجم حسب الحاجة */
+  line-height: 1.2;          /* يخلي المسافة بين السطور مناسبة */
+  margin: 5px 0;             /* تباعد بسيط فوق وتحت */
  
 }
 
@@ -463,8 +424,8 @@ cursor: pointer;
 
 .slide img {
   position: absolute;
-  width: 80px;
-  height: 80px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   object-fit: cover;
   transition: 0.3s ease-in-out;

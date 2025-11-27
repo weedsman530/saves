@@ -8,7 +8,7 @@ import base64
 # ==========================
 CHROMEDRIVER_PATH = r"C:\chromedriver\chromedriver.exe"
 SAVE_FOLDER = r"C:\lexi_data"
-BASE_URL = "https://online.lexi.com/lco/action/index/generic/patch_f/{}"
+BASE_URL = "https://online.lexi.com/lco/action/index/generic/multinat_f/{}"
 LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 # ==========================
@@ -73,3 +73,4 @@ for letter in LETTERS:
 
 driver.quit()
 print("اكتمل تحميل جميع الحروف كـ Webpage Complete!")
+
